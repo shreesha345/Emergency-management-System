@@ -94,10 +94,16 @@ Database Logging & Real-Time Dashboard Update
 ```bash
 # Clone repository
 git clone https://github.com/shreesha345/Emergency-management-System.git
-cd Emergency-management-System.git
+cd Emergency-management-System
 
-# Create virtual environment
+# Method A: Standard Python venv
 python -m venv .venv
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # macOS/Linux
+
+# Method B: Using uv (Recommended for 10x-100x faster setup)
+# Install uv: curl -LsSf https://astral.sh/uv/install.sh | sh (macOS/Linux) or powershell -c "irm https://astral.sh/uv/install.ps1 | iex" (Windows)
+uv venv
 .venv\Scripts\activate  # Windows
 source .venv/bin/activate  # macOS/Linux
 ```
@@ -118,8 +124,11 @@ ollama serve
 ### 3. Install Dependencies
 
 ```bash
-# Backend
+# Backend (Using Standard pip)
 pip install -e .
+
+# Backend (Using uv - Recommended)
+uv pip install -e .
 
 # Frontend
 cd frontend
