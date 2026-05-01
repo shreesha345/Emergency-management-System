@@ -93,8 +93,8 @@ Database Logging & Real-Time Dashboard Update
 
 ```bash
 # Clone repository
-git clone <repository-url>
-cd RudraOne
+git clone https://github.com/shreesha345/Emergency-management-System.git
+cd Emergency-management-System.git
 
 # Create virtual environment
 python -m venv .venv
